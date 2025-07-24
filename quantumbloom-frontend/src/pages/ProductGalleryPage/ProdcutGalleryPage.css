@@ -1,0 +1,37 @@
+.gallery-page {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+  font-family: 'Garamond', 'Georgia', serif;
+}
+
+.gallery-page h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #093A3E;
+}
+
+.full-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

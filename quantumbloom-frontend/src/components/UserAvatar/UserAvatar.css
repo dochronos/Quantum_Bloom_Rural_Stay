@@ -1,0 +1,21 @@
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  background-color: #0a9396; /* Verde suave compatible con Quantum Bloom */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: 'Garamond', serif; /* o sans-serif si no está disponible */
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar:hover {
+  background-color: #005f63; /* tono más oscuro para hover */
+  cursor: pointer;
+  transform: scale(1.05); /* efecto sutil al pasar el mouse */
+}

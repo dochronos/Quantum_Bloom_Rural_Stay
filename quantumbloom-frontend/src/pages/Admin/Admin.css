@@ -1,0 +1,228 @@
+.admin-panel {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 5vw auto;
+}
+
+.admin-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+.add-product-form {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group select {
+  width: 200px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.image-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+}
+
+.error {
+  color: #dc3545;
+  margin-top: 0.5rem;
+}
+
+.custom-file-upload {
+  border: 2px solid #d5e5f5;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: #f8f9fa;
+  transition: background 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background: #007bff;
+  color: white;
+}
+
+button {
+  border: 2px solid #d5e5f5;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: #f8f9fa;
+  transition: background 0.3s ease;
+  background-color: #97C8EB;
+  color: #093A3E;
+}
+
+button:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* ======================== */
+/*   MANAGE FEATURES STYLE  */
+/* ======================== */
+
+.manage-features {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.manage-features h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.manage-feature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.manage-feature-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.feature-button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.feature-button:hover {
+  background-color: #c82333;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.feature-list img {
+  height: 30px;
+}
+
+/* ======================== */
+/*     DATE SELECTOR TAGS   */
+/* ======================== */
+
+.selected-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.date-tag {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.date-tag button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
+/* ======================== */
+/*       RESPONSIVE         */
+/* ======================== */
+
+@media (max-width: 768px) {
+  .manage-features {
+    padding: 15px;
+  }
+
+  .manage-feature-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .manage-feature-container input {
+    width: 100%;
+  }
+
+  .feature-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .feature-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}

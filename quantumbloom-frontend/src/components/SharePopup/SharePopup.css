@@ -1,0 +1,121 @@
+/* Overlay oscuro de fondo */
+.share-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Ventana emergente */
+.share-popup {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  font-family: Garamond, 'Georgia', serif;
+}
+
+.share-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  color: #093A3E;
+}
+
+/* Contenido principal */
+.share-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.share-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #e0e0e0;
+}
+
+.share-description {
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.share-message-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Botones */
+.share-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.share-btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.share-btn.facebook {
+  background-color: #3b5998;
+}
+.share-btn.facebook:hover {
+  background-color: #2d4373;
+}
+
+.share-btn.twitter {
+  background-color: #1da1f2;
+}
+.share-btn.twitter:hover {
+  background-color: #0d8ddb;
+}
+
+.share-btn.instagram {
+  background-color: #e1306c;
+}
+.share-btn.instagram:hover {
+  background-color: #c02e61;
+}
+
+/* Cerrar */
+.close-button {
+  margin-top: 1.5rem;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #bbb;
+  color: white;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.close-button:hover {
+  background-color: #999;
+}
