@@ -1,0 +1,108 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.loginForm {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease-in-out;
+}
+
+.loginForm h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+}
+
+.loginForm div {
+  margin-bottom: 20px;
+}
+
+.loginForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.loginForm input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginForm input:focus {
+  border-color: #3AAFB9;
+}
+
+.loginForm button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #3AAFB9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginForm button:hover {
+  background-color: #093A3E;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@media (max-width: 480px) {
+  .loginForm {
+    padding: 20px;
+  }
+
+  .loginForm h2 {
+    font-size: 20px;
+  }
+
+  .loginForm input {
+    font-size: 12px;
+  }
+
+  .loginForm button {
+    font-size: 14px;
+  }
+}
+
+.reservationMessage {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #ffeeba;
+  text-align: center;
+}

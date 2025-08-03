@@ -1,15 +1,19 @@
-import React from 'react';
-import './ProductsGrid.css';
-import { Link } from 'react-router-dom';
+'use client';
 
-const ProductsGrid = ({ products, currentPage, setCurrentPage }) => {
+import React from 'react';
+import Link from 'next/link';
+import '@/styles/products-grid.css';
+
+const ProductsGrid = ({ products = [], currentPage, setCurrentPage }) => {
   const productsPerPage = 6;
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    if (setCurrentPage) setCurrentPage(pageNumber);
+  };
 
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(products.length / productsPerPage); i++) {
@@ -22,14 +26,18 @@ const ProductsGrid = ({ products, currentPage, setCurrentPage }) => {
         {currentProducts.map((product) => (
           <div key={product.id} className="product-card">
             <img
-              src={product.images[0]}
+              src={product.images?.[0] || '/images/quantumbloom/placeholder.jpg'}
               alt={product.name}
               className="product-image"
-              onError={(e) => (e.target.src = '/images/quantumbloom/placeholder.jpg')}
+              onError={(e) => {
+                e.target.src = '/images/quantumbloom/placeholder.jpg';
+              }}
             />
             <div className="product-info">
               <h3>
-                <Link to={`/product/${product.id}`}>{product.name}</Link>
+                <Link href={`/product/${product.id}`}>
+                  {product.name}
+                </Link>
               </h3>
               <p>Alojamiento: {product.type}</p>
               <p>Desde: {product.price}</p>
@@ -40,18 +48,10 @@ const ProductsGrid = ({ products, currentPage, setCurrentPage }) => {
       </div>
 
       <div className="pagination-controls">
-        <button 
-          onClick={() => paginate(1)} 
-          disabled={currentPage === 1}
-          className="inicio"
-        >
+        <button onClick={() => paginate(1)} disabled={currentPage === 1}>
           Inicio
         </button>
-        <button 
-          onClick={() => paginate(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="anterior"
-        >
+        <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>
           Anterior
         </button>
         {pageNumbers.map((number) => (
@@ -63,17 +63,13 @@ const ProductsGrid = ({ products, currentPage, setCurrentPage }) => {
             {number}
           </button>
         ))}
-        <button 
+        <button
           onClick={() => paginate(currentPage + 1)}
           disabled={currentPage === pageNumbers.length}
-          className="siguiente"
         >
           Siguiente
         </button>
-        <button 
-          onClick={() => paginate(pageNumbers.length)}
-          className="final"
-        >
+        <button onClick={() => paginate(pageNumbers.length)}>
           Final
         </button>
       </div>

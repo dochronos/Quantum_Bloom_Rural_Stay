@@ -1,0 +1,61 @@
+/* ========== PANEL ADMINISTRATIVO GENERAL ========== */
+
+.adminPanel {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.adminPanel h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #093a3e;
+}
+
+/* ========== MENÚ DE OPCIONES ========== */
+
+.adminMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.adminMenu li {
+  margin: 1rem 0;
+}
+
+.adminMenu a {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.adminMenu a:hover {
+  background-color: #0056b3;
+}
+
+/* ========== MENSAJE EN VISTA MOBILE ========== */
+
+.mobileMessage {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #d9534f;
+  background-color: #fff3f3;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.mobileMessage h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mobileMessage p {
+  font-size: 1rem;
+}

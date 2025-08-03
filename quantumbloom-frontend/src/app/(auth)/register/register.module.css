@@ -1,0 +1,83 @@
+.registerContainer {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  text-align: center;
+  color: #093a3e;
+  margin-bottom: 1.5rem;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submitButton {
+  padding: 0.75rem;
+  background-color: #093a3e;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #0c4d51;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.success {
+  color: #28a745;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .registerContainer {
+    padding: 1.5rem;
+  }
+
+  .registerForm div {
+    margin-bottom: 1.25rem;
+  }
+}

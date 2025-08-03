@@ -1,0 +1,120 @@
+.manageCategories {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.manageCategories h1,
+.manageCategories h2 {
+  text-align: center;
+  color: #093A3E;
+}
+
+.categoryActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.categoryActions input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+.categoryActions button {
+  padding: 0.5rem 1.2rem;
+  background-color: #97C8EB;
+  color: #093A3E;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.categoryActions button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.categoriesList {
+  margin-top: 2rem;
+}
+
+.categoriesList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categoryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.categoryItem span {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+}
+
+.categoryItem button {
+  padding: 0.3rem 0.8rem;
+  font-size: 14px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.categoryItem button:hover {
+  background-color: #c82333;
+}
+
+.categoryItem button:last-child {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.categoryItem button:last-child:hover {
+  background-color: #e0a800;
+}
+
+/* ========== ERROR MESSAGE ========== */
+.error {
+  color: #dc3545;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .categoryItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .categoryActions input {
+    width: 100%;
+  }
+
+  .categoryActions button {
+    width: 100%;
+  }
+}

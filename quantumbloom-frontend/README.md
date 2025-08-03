@@ -34,7 +34,7 @@ quantumbloom-frontend/
 
 1. Clonar el repositorio:
    
-   git clone https://github.com/usuario/proyecto.git
+   git clone https://github.com/dochronos/Quantum_Bloom_Rural_Stay
    cd quantumbloom-frontend
    npm install
 

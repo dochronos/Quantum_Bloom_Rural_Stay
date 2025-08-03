@@ -7,7 +7,7 @@ const recommendations = [
     type: 'Cabaña rústica en las sierras',
     price: '$18.000/noche',
     rating: '4.9',
-    img: "/images/quantumbloom/rural1.jpg"
+    img: '/images/quantumbloom/rural1.jpg',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const recommendations = [
     type: 'Casa de campo con pileta',
     price: '$25.000/noche',
     rating: '4.8',
-    img: "/images/quantumbloom/rural2.jpg"
+    img: '/images/quantumbloom/rural2.jpg',
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const recommendations = [
     type: 'Tiny house entre árboles',
     price: '$20.000/noche',
     rating: '4.7',
-    img: "/images/quantumbloom/rural3.jpg"
+    img: '/images/quantumbloom/rural3.jpg',
   },
 ];
 
@@ -35,9 +35,14 @@ const RecommendationsSection = () => {
         {recommendations.map((item) => (
           <div key={item.id} className="recommendation-card">
             <div className="card-image">
-              <img src={item.img} alt={item.name} />
+              <img
+                className="recommendation-image"
+                src={item.img}
+                alt={item.name}
+                // onError={(e) => { e.target.src = '/images/default.jpg'; }}
+              />
             </div>
-            <h3>{item.name}</h3>
+            <h3 className="recommendation-title">{item.name}</h3>
             <p className="property-type">{item.type}</p>
             <div className="card-footer">
               <span className="price">{item.price}</span>

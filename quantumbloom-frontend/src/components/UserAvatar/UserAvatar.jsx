@@ -1,9 +1,11 @@
+'use client';
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import './UserAvatar.css';
-import { useNavigate } from 'react-router-dom';
 
 const UserAvatar = ({ name = "Usuario" }) => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const initials = name
     .trim()
@@ -13,7 +15,7 @@ const UserAvatar = ({ name = "Usuario" }) => {
     .toUpperCase();
 
   const handleClick = () => {
-    navigate('/user-dashboard');
+    router.push('/user-dashboard');
   };
 
   return (
