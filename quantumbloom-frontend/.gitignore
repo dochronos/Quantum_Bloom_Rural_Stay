@@ -5,6 +5,9 @@
 /.next
 /out
 
+# Build output
+/build
+
 # Environment variable files
 .env
 .env.*.local
@@ -19,6 +22,9 @@ pnpm-debug.log*
 
 # Testing coverage
 /coverage
+
+# Editor settings
+.vscode/
 
 # Yarn Plug'n'Play
 .pnp.*

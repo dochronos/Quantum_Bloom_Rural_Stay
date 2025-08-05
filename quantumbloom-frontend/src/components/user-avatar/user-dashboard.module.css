@@ -1,0 +1,32 @@
+.userDashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Garamond', 'Georgia', serif;
+  text-align: center;
+}
+
+.dashboardOptions {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dashboardButton {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #3AAFB9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 180px;
+}
+
+.dashboardButton:hover {
+  background-color: #093A3E;
+}

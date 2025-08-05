@@ -1,34 +1,48 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './profile.module.css';
 
 const ProfilePage = () => {
-  const token =
-    typeof window !== 'undefined' ? localStorage.getItem('token') : null;
+  const [tokenData, setTokenData] = useState<{ name?: string; sub?: string } | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-  if (!token) {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        setError('No has iniciado sesión.');
+        return;
+      }
+
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        setTokenData(payload);
+      } catch (err) {
+        console.error('Error al decodificar el token:', err);
+        setError('Error al leer los datos del perfil.');
+      }
+    }
+  }, []);
+
+  if (error) {
     return (
       <div className={styles['profile-container']}>
-        <h2>No has iniciado sesión.</h2>
+        <h2>{error}</h2>
       </div>
     );
   }
 
-  let decoded: { name?: string; sub?: string } = {};
-  try {
-    decoded = JSON.parse(atob(token.split('.')[1]));
-  } catch (error) {
-    console.error('Error al decodificar el token:', error);
+  if (!tokenData) {
     return (
       <div className={styles['profile-container']}>
-        <h2>Error al leer los datos del perfil.</h2>
+        <h2>Cargando perfil...</h2>
       </div>
     );
   }
 
-  const name = decoded.name || 'Usuario';
-  const email = decoded.sub || 'Sin email';
+  const name = tokenData.name || 'Usuario';
+  const email = tokenData.sub || 'Sin email';
 
   return (
     <div className={styles['profile-container']}>

@@ -1,10 +1,10 @@
-import React from 'react';
-import Main from '../components/Main/Main';
-import '../styles/landing.css';
+'use client';
+
+import Main from '@/components/main/Main';
 
 export default function Page() {
   return (
-    <div className="homepage-container">
+    <div className="min-h-screen bg-white text-neutral-900">
       <Main />
     </div>
   );

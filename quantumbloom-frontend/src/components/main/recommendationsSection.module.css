@@ -1,0 +1,76 @@
+.recommendationsSection {
+  padding: 40px 20px;
+  background-color: #f8faf9;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #093a3e;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recommendationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.recommendationCard {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.recommendationCard:hover {
+  transform: scale(1.02);
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.recommendationImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommendationTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  padding: 10px 16px 0;
+}
+
+.propertyType {
+  font-size: 16px;
+  color: #666;
+  padding: 4px 16px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 16px;
+  font-size: 16px;
+  color: #3aafba;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.rating {
+  font-size: 15px;
+  color: #f5b301;
+}

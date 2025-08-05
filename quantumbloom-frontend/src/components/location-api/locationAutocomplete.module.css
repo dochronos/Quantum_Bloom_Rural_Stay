@@ -1,0 +1,17 @@
+.location-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Garamond', 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.location-input:focus {
+  outline: none;
+  border-color: #3AAFB9;
+  box-shadow: 0 0 0 2px rgba(58, 175, 185, 0.2);
+}

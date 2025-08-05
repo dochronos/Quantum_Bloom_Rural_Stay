@@ -1,0 +1,27 @@
+.error {
+  color: red;
+  font-weight: bold;
+  padding: 1rem;
+  background: #ffe6e6;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error-message button {
+  background-color: #bd3e3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.error-message button:hover {
+  background-color: #993333;
+}

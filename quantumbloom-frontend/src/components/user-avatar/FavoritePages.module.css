@@ -1,0 +1,55 @@
+.favoritesPage {
+  padding: 40px 20px;
+  font-family: 'Garamond', 'Georgia', serif;
+  text-align: center;
+}
+
+.loadingMessage,
+.errorMessage,
+.emptyMessage {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.favoritesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.favoriteItem {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.favoriteItem h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.favoriteItem p {
+  margin-bottom: 8px;
+}
+
+/* 🔽 Botón reutilizable */
+.detailsButton {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #3AAFB9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.detailsButton:hover {
+  background-color: #093A3E;
+}

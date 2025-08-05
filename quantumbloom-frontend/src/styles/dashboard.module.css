@@ -1,0 +1,172 @@
+/* ===== Dashboard General ===== */
+.dashboard {
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  background-color: #fdfdfb;
+  color: #333;
+}
+
+/* ===== Summary Cards ===== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  min-width: 180px;
+  flex: 1;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ===== Tables ===== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.table th {
+  background-color: #f5f5f5;
+  color: #444;
+  font-weight: 600;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f0f0;
+  transition: background 0.2s ease-in-out;
+}
+
+/* ===== Section Containers ===== */
+.detail-panels,
+.details-container,
+.list-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.details-container h2,
+.list-container h2 {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* ===== Chart Section ===== */
+.chart-container {
+  margin-top: 2rem;
+  text-align: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chart-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+}
+
+/* Si usás MUI PieChart, este override puede ser útil */
+.css-1eg20ca-MuiResponsiveChart-container {
+  background-color: transparent !important;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+/* ===== Product List Section ===== */
+.products-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ===== Back Button (Navigation) ===== */
+.back-button {
+  margin-top: 2rem;
+  background-color: #d4a373;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #c68d62;
+}
+
+/* ===== Error States (si no lo centralizás) ===== */
+.error {
+  color: red;
+  font-weight: bold;
+  padding: 1rem;
+  background: #ffe6e6;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Responsive detalle que podría compartirse */
+@media (min-width: 768px) {
+  .product-detail-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

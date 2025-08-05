@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import AvailabilityCalendar from '@/components/AvailabilityCalendar/AvailabilityCalendar';
+import AvailabilityCalendar from '@/components/availability-calendar/AvailabilityCalendar';
 import styles from './reserve.module.css';
 
 interface Product {
